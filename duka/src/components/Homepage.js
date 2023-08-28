@@ -2,7 +2,7 @@
 function Home() {
     return (
       <div className="Home">
-        <nav>Home</nav>
+        <nav>Home </nav>
       </div>
     );
   }
