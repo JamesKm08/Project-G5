@@ -1,4 +1,6 @@
 import Home from "./components/Homepage";
+import Login from "./components/Login";
+
 
 function App() {
 
@@ -10,6 +12,7 @@ function App() {
           <li>Cart</li>
           <li>My Orders</li>
       </nav>
+      <Login/>
       <Home/>
     </div>
   );
