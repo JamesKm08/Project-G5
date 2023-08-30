@@ -1,42 +1,77 @@
-import React from 'react';
-import { useForm } from 'react-hook-form';
+import React, { useState } from 'react';
 
 const CheckoutForm = () => {
-const { register, handleSubmit, errors } = useForm();
+const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    address: '',
+    creditCard: '',
+});
 
-const onSubmit = (data) => {
-    console.log(data); // Simulate a successful submission
+const handleSubmit = (e) => {
+    e.preventDefault();
+    // Simulate order submission and generate receipt
+    const orderReceipt = {
+      orderID: Math.floor(Math.random() * 100000),
+    ...formData,
+    };
+    console.log('Order Receipt:', orderReceipt);
+};
+
+const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+    ...prevData,
+    [name]: value,
+    }));
 };
 
 return (
-    <form className="checkout-form" onSubmit={handleSubmit(onSubmit)}>
-<h2>Checkout</h2>
-    <div>
-        <label>Name</label>
-        <input type="text" name="name" ref={register({ required: true })} />
-        {errors.name && <span className="error">Name is required</span>}
-    </div>
-    <div>
-        <label>Email</label>
+    <div className="checkout-form-container">
+    <h2>Checkout</h2>
+    <form className="checkout-form" onSubmit={handleSubmit}>
+        <label htmlFor="name">Name</label>
+        <input
+        type="text"
+        id="name"
+        name="name"
+        value={formData.name}
+        onChange={handleChange}
+        required
+        />
+
+        <label htmlFor="email">Email</label>
         <input
         type="email"
+        id="email"
         name="email"
-        ref={register({ required: true, pattern: /^\S+@\S+$/i })}
+        value={formData.email}
+        onChange={handleChange}
+        required
         />
-        {errors.email && <span className="error">Enter a valid email</span>}
-    </div>
-    <div>
-        <label>Shipping Address</label>
-        <textarea name="address" ref={register({ required: true })} />
-        {errors.address && <span className="error">Address is required</span>}
-    </div>
-    <div>
-        <label>Credit Card Number</label>
-        <input type="text" name="creditCard" ref={register({ required: true })} />
-        {errors.creditCard && <span className="error">Credit card is required</span>}
-    </div>
-    <button type="submit">Place Order</button>
+
+        <label htmlFor="address">Shipping Address</label>
+        <textarea
+        id="address"
+        name="address"
+        value={formData.address}
+        onChange={handleChange}
+        required
+        />
+
+        <label htmlFor="creditCard">Credit Card Number</label>
+        <input
+        type="text"
+        id="creditCard"
+        name="creditCard"
+        value={formData.creditCard}
+        onChange={handleChange}
+        required
+        />
+
+        <button type="submit">Place Order</button>
     </form>
+    </div>
 );
 };
 
