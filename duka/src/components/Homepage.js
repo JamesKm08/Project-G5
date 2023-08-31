@@ -13,6 +13,7 @@ function Home() {
 console.log(products)
     return (
       <div className="Home">
+
         {products.map(product=>(
             <div className= "productdiv" key= {product.id}>
 
@@ -41,6 +42,7 @@ console.log(products)
           </div>
          
       ))}
+
       </div>
     );
   }
