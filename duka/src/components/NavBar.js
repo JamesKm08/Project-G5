@@ -1,7 +1,9 @@
-import {  Link} from "react-router-dom";
+import {  Link } from "react-router-dom";
+import './NavBar.css'
 
 const NavBar = () => {
-return(<>
+return(
+    <div className="navbar">
     <nav>
     <Link to = "/">
          <h4>Home</h4>
@@ -24,7 +26,7 @@ return(<>
         </Link>
        
     </nav>
-    </>
+    </div>
     
 )
 
