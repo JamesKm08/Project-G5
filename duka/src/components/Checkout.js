@@ -23,7 +23,8 @@ const handleChange = (e) => {
     setFormData((prevData) => ({
     ...prevData,
     [name]: value,
-    }));
+    
+}));
 };
 
 return (
