@@ -1,11 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState,useEffect } from "react";
 import './Homepage.css'
 
 function Home() {
 
   const [products, setProducts] = useState([]);
-  const [hoveredProductId, setHoveredProductId] = useState(null); // Track hovered product ID
-
+  const [hoveredProductId, setHoveredProductId] = useState(null);
+  
   useEffect(() => {
     fetch("http://localhost:8000/products")
       .then((res) => res.json())
