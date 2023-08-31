@@ -15,7 +15,7 @@ function RegisterForm() {
       [name]: value,
     }));
   };
-
+ 
   const handleSubmit = (event) => {
     event.preventDefault();
 
