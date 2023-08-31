@@ -1,36 +1,27 @@
-import React, { useState } from 'react';
-// import './App.css';
-import Product from './components/Product';
+import Home from "./components/Homepage";
+import Login from "./components/Login";
+import { Routes, Route} from "react-router-dom";
+import NavBar from "./components/NavBar";
 import Cart from './components/Cart';
-import productsData from './db.json';
 
 function App() {
-  const [cartItems, setCartItems] = useState([]);
-
-  const addToCart = (product) => {
-    setCartItems([...cartItems, product]);
-  };
-
-  const removeFromCart = (productId) => {
-    const updatedCart = cartItems.filter(item => item.id !== productId);
-    setCartItems(updatedCart);
-  };
 
   return (
-    <div className="App">
-      <h1>React Cart App</h1>
-      <div className="products">
-        {productsData.products.map(product => (
-          <Product
-            key={product.id}
-            product={product}
-            addToCart={addToCart}
-          />
-        ))}
-      </div>
-      <Cart cartItems={cartItems} removeFromCart={removeFromCart} />
-    </div>
-  );
+    <>
+<div className="App">
+      
+    <NavBar/>
+
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+      <Route path="/Login" element={<Login/>}/>
+        <Route path="/Cart" element={<Cart/>}/>
+    </Routes>
+    
+  </div>
+    </>
+  );   
+
 }
 
 export default App;
