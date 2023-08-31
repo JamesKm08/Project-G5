@@ -1,11 +1,12 @@
-import React, { useState } from "react";
-import './Register.css'
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import './Register.css';
 
 function RegisterForm() {
   const [formData, setFormData] = useState({
-    email: "",
-    password: "",
-    confirmPassword: "",
+    email: '',
+    password: '',
+    confirmPassword: '',
   });
 
   const handleChange = (event) => {
@@ -15,20 +16,22 @@ function RegisterForm() {
       [name]: value,
     }));
   };
- 
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
     if (formData.password !== formData.confirmPassword) {
-      alert("Passwords do not match.");
+      alert('Passwords do not match.');
       return;
     }
 
-    
-    console.log("Form submitted:", formData);
+    console.log('Form submitted:', formData);
+    // Use the useNavigate hook to navigate to the login page
+    navigate('/login');
   };
-
   
+  const navigate = useNavigate(); 
+
   return (
     <div className="container">
       <h2>Register</h2>
@@ -70,6 +73,9 @@ function RegisterForm() {
           Register
         </button>
       </form>
+      <p>
+        Already have an account? <Link to="/login">Login here</Link>
+      </p>
     </div>
   );
 }
