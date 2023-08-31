@@ -22,6 +22,8 @@ const ContactForm = () => {
     console.log('Form data:', formData);
   };
 
+
+  
   return (
     <div className="contact-form">
       <h2>Contact Us</h2>
