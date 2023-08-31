@@ -28,6 +28,7 @@ function RegisterForm() {
     console.log("Form submitted:", formData);
   };
 
+  
   return (
     <div className="container">
       <h2>Register</h2>
