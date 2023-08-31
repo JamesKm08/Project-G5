@@ -15,7 +15,7 @@ function RegisterForm() {
       [name]: value,
     }));
   };
-
+ 
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -28,6 +28,7 @@ function RegisterForm() {
     console.log("Form submitted:", formData);
   };
 
+  
   return (
     <div className="container">
       <h2>Register</h2>
