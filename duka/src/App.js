@@ -7,7 +7,6 @@ import CheckoutForm from './components/Checkout';
 import ContactForm from "./components/Contact";
 import RegisterForm from "./components/Register";
 
-
 function App() {
 
   return (
@@ -22,6 +21,7 @@ function App() {
       <Route path="/Cart" element={<Cart/>}/>
       <Route path="/checkout" element={<CheckoutForm/>}/> 
       <Route path="/Contact" element={<ContactForm/>}/>
+      <Route path="/Register" element={<RegisterForm/>}/>
     </Routes>
     
   </div>
