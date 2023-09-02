@@ -17,8 +17,19 @@ function Home({ addToCart }) {
 
   useEffect(() => {
     fetch("http://localhost:8000/products")
-      .then((res) => res.json())
-      .then((data) => setProducts(data));
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return res.json();
+      })
+      .then((data) => {
+        console.log(data); 
+        setProducts(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
   }, []);
 
   console.log(products);
