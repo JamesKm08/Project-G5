@@ -9,7 +9,7 @@ function Cart({ cartItems, removeFromCart }) {
     setRemovedItem(itemId);
     setTimeout(() => {
       setRemovedItem(null);
-    }, 4000); // Hide the notification after 2 seconds
+    }, 4000);
   };
 
   return (
