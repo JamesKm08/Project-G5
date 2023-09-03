@@ -8,6 +8,7 @@ function searchOrder() {
     fetch(`http://localhost:8000/orders/${orderId}`)
         .then(resp => resp.json())
         .then(data => setOrder(data));
+        
 }
 
 const status = ["Follow your Order", "We've got it", "On its way", "With your courier", "Delivered"];
