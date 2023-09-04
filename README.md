@@ -29,4 +29,4 @@ Run npm run server to run our local db.json<br>
 Run npm start to start our application<br>
 
 ### Requirements
-node version 18.0 or above
+node version 18.12.0 or above
