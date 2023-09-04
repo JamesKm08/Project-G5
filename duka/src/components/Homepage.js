@@ -7,7 +7,7 @@ function Home() {
   const [hoveredProductId, setHoveredProductId] = useState(null);
   
   useEffect(() => {
-    fetch("http://localhost:8000/products")
+    fetch("https://duka-vercel.vercel.app/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
