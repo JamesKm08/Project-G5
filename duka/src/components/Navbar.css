@@ -1,7 +1,7 @@
 .navbar {
     display: flex;
     justify-content: flex-end; 
-    background-color: #222;
+    background-color: snow;
     padding: 10px 20px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
@@ -11,6 +11,7 @@
     display: flex;
     align-items: center;
     flex-direction: row-reverse; 
+    padding: 40px;
   }
   
   .nav-link {
@@ -28,10 +29,10 @@
   }
   
   .nav-link:hover {
-    color: #ffd700;
+    color: blue;
   }
   
   .nav-link:active {
-    color: #f2b30f;
+    color: blue;
   }
   
