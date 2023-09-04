@@ -1,11 +1,10 @@
-import { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import './Homepage.css'
 
-function Home() {
-
+function Home({ addToCartHandler }) {
   const [products, setProducts] = useState([]);
   const [hoveredProductId, setHoveredProductId] = useState(null);
-  
+
   useEffect(() => {
     fetch("https://duka-vercel.vercel.app/products")
       .then((res) => res.json())
@@ -14,7 +13,7 @@ function Home() {
 
   return (
     <div className="Home">
-      {products.map(product => (
+      {products.map((product) => (
         <div
           className="productdiv"
           key={product.id}
@@ -26,22 +25,34 @@ function Home() {
           </div>
 
           <div>
-            <img className="imagediv" src={product.images[1]} alt={product.title} height= "200px"/>
+            <img
+              className="imagediv"
+              src={product.images[1]}
+              alt={product.title}
+              height="200px"
+            />
           </div>
 
           {hoveredProductId === product.id && (
             <>
-            <div>
-              <p className="descdiv">{product.description}</p>
-            </div>
-          
-          <div>
-            <h3 className="pricediv">{product.price} USD</h3>
-          </div>
-          </>)}
+              <div>
+                <p className="descdiv">{product.description}</p>
+              </div>
+
+              <div>
+                <h3 className="pricediv">{product.price} USD</h3>
+              </div>
+            </>
+          )}
 
           <div>
-            <button className="cartButton">Add to Cart</button>
+            {/* Add to Cart button */}
+            <button
+              className="cartButton"
+              onClick={() => addToCartHandler(product)} 
+            >
+              Add to Cart
+            </button>
           </div>
         </div>
       ))}
