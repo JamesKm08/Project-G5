@@ -25,10 +25,6 @@ return(
         <h4>Register</h4>
         </Link>
   
-        <Link to = "/Orders">
-        <h4>My Order</h4>
-        </Link>
-      
         <Link to = "/Checkout">
         <h4>Checkout</h4>
         </Link>
