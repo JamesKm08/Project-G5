@@ -1,0 +1,74 @@
+body{
+    background-color: rgb(22, 20, 20);
+}
+.Home{
+    margin: 0px auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: rgb(31, 28, 28);
+    border-radius: 5px;
+}
+
+.productdiv{
+    width:400px;
+    height: 420px;
+    border: 1px solid black;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 10px;
+    margin: 30;
+    margin-top: 50px;
+    background-color: rgb(43, 40, 40);
+}
+
+.imagediv{
+    width: 100%;
+    max-width: 200px;
+    min-height: 100px;
+    display: block;
+    object-fit:fill;
+}
+
+.titlediv{
+    text-transform: uppercase;
+    margin:10px 0px;
+    color: beige;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.descdiv{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.pricediv{
+    margin: 10px 0px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    line-height: 30px;
+    font-style: italic;
+}
+.cartButton{
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: blue;
+    color: white;
+    width: 100%;
+    height: 40px;
+    display: block;
+    cursor:pointer;
+    text-transform: uppercase;
+    margin: 15px auto;
+}
+
+.cartButton:hover{
+    background-color: red; 
+}
+
+.cartButton:active{
+    transform: translateY(2px);
+}
