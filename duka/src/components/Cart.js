@@ -47,6 +47,7 @@ const Cart = ({ cartItems, onRemoveFromCart, onEmptyCart, onUpdateCartQty }) => 
         <p className="cart__total-price">{total} USD</p>
       </div>
     );
+
   };
 
   return (

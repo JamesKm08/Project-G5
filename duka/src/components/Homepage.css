@@ -1,10 +1,13 @@
+body{
+    background-color: rgb(133, 123, 123);
+}
 .Home{
-    margin: 20px auto;
-    width: 80%;
+    margin: 0px auto;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    /* background-color: black; */
+    background-color: rgb(31, 28, 28);
     border-radius: 5px;
 }
 
@@ -15,8 +18,9 @@
     border-radius: 5px;
     overflow: hidden;
     padding: 10px;
-    margin: 40px 20px;
-    background-color: whitesmoke;
+    margin: 30;
+    margin-top: 50px;
+    background-color: rgb(43, 40, 40);
 }
 
 .imagediv{
@@ -24,12 +28,18 @@
     max-width: 200px;
     min-height: 100px;
     display: block;
-    object-fit:contain;
+    object-fit:fill;
 }
 
 .titlediv{
     text-transform: uppercase;
     margin:10px 0px;
+    color: beige;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.descdiv{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .pricediv{
