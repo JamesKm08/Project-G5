@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Checkout.css'
 
 const CheckoutForm = () => {
 const [formData, setFormData] = useState({
